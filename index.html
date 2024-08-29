@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Edu+QLD+Beginner&family=Noto+Sans+KR:wght@900&family=Ubuntu:wght@500&family=Uchen&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="todoRegistration_loginCSS.css">
+    <link rel="stylesheet" href="todoHomeCSS.css">
+
+    <title>Todo-Home</title>
+</head>
+
+
+<body>
+    <div class="loginPage" id="loginPage_ID">
+        <!-------------------------------------------- nav------------------------------------------------ -->
+        <div class="todoTitleName">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-align-top"
+                viewBox="0 0 16 16" style="    margin-inline: 16px;">
+                <rect width="4" height="12" rx="1" transform="matrix(1 0 0 -1 6 15)" />
+                <path d="M1.5 2a.5.5 0 0 1 0-1v1zm13-1a.5.5 0 0 1 0 1V1zm-13 0h13v1h-13V1z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alexa"
+                viewBox="0 0 16 16">
+                <path
+                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+            </svg>
+            <h3 style="font-size: 21px; margin-inline: 16px; margin-bottom: 0;">D</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alexa"
+                viewBox="0 0 16 16">
+                <path
+                    d="M7.996 0A7.998 7.998 0 0 0 0 8a8 8 0 0 0 6.93 7.93v-1.613a1.06 1.06 0 0 0-.717-1.008A5.602 5.602 0 0 1 2.4 7.865 5.579 5.579 0 0 1 8.054 2.4a5.599 5.599 0 0 1 5.535 5.81l-.002.046a6.116 6.116 0 0 1-.012.192l-.005.061a4.85 4.85 0 0 1-.033.284l-.01.068c-.685 4.516-6.564 7.054-6.596 7.068A7.998 7.998 0 0 0 15.992 8 7.998 7.998 0 0 0 7.996.001Z" />
+            </svg>
+        </div>
+        <div class="divider"></div>
+        <!---------------------------- registration & login page --------------------------------------- -->
+        <div class="registration_login">
+            <!------------------------------- registration page---------------------------- -->
+            <div class="registration" style="height: auto;">
+                <div class=" registrationHead registrationBtn">
+                    <input class="registrateBtn" value="New Registration" type="button" name="button"
+                        style="width: 130px; border: none; border-radius: 25px;">
+                </div>
+                <div class="name_input">
+                    <div class="nameInput">
+                        Name : <input class="nameCls" id="nameInputId" onclick="inputClickRemoveError()" type="text"
+                            placeholder="Enter Your Name">
+
+                    </div>
+                    <div class="errorNamecls" id="errorName"></div>
+                    <div class="email_input">
+                        E-mail : <input class="emailCls" id="emailInputId" onclick="inputClickRemoveError()" type="text"
+                            placeholder="Enter Your E-mail">
+
+                    </div>
+                    <div class="erroremailcls" id="errorEmail"></div>
+                    <div class="pass_input">
+                        Password : <input class="passCls" id="passInputId" onclick="inputClickRemoveError()" type="text"
+                            placeholder="Set New Password">
+
+                    </div>
+                    <div class="errorPasscls" id="errorPass"></div>
+                    <div class="cPass_input">
+                        Comfirm Password : <input class="cPassCls" id="cPassInputId" onclick="inputClickRemoveError()"
+                            type="text" placeholder="re-enter Password">
+
+                    </div>
+                    <div class="errorCPasscls" id="errorCPass"></div>
+
+                </div>
+                <div class="errorcls" id="errorId"></div>
+                <div class="registrationBtn">
+                    <input class="registrateBtn" value="Registration" type="button" name="button"
+                        onclick="registrationFun()"
+                        style="width: 100px; border: none; margin: auto; border-radius: 9px;">
+                </div>
+            </div>
+
+            <!--------------------------------- login page--------------------------- -->
+            <div class="login">
+                <div class="loginHead registrationBtn">
+                    <input class=" registrateBtn " value="Login" type="button" name="button"
+                        style="width: 130px; border: none; border-radius: 25px;">
+                </div>
+                <div class="name_input">
+                    <div class="email_input">
+                        E-mail : <input class="emailCls" id="loginEmailId" type="text" placeholder="Enter Your E-mail">
+
+                    </div>
+
+                    <div class="pass_input">
+                        Password : <input class="passCls" id="loginPassId" type="text" placeholder="Enter Password">
+
+                    </div>
+                </div>
+                <div class="errorcls" id="errorEmailID"></div>
+                <div class="loginBtn">
+                    <input class="logBtn" value="Login" type="button" onclick="loginFun(emailInputVal,passInputVal)"
+                        name="button" style="width: 100px; border: none; margin: auto; border-radius: 9px;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- ------------------------homePage_afterLogin-------------------------------------------------- -->
+    <div class="homePage_afterLogin" id="homePage_ID" style="display: none;">
+        <nav class="navbar bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-xbox" viewBox="0 0 16 16"
+                        style="    margin-left: 15px;     margin-bottom: 0.5rem;">
+                        <path
+                            d="M7.202 15.967a7.987 7.987 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33Zm-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.372 8.372 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.495 9.495 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4.171 4.171 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.778 7.778 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12.246 12.246 0 0 1-.654-.319Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-align-top" viewBox="0 0 16 16"
+                        style=" margin-left: 15px;     margin-bottom: 0.5rem;">
+                        <rect width="4" height="12" rx="1" transform="matrix(1 0 0 -1 6 15)" />
+                        <path d="M1.5 2a.5.5 0 0 1 0-1v1zm13-1a.5.5 0 0 1 0 1V1zm-13 0h13v1h-13V1z" />
+                    </svg>
+                    <h4>ODO</h4>
+                </a>
+            </div>
+        </nav>
+        <hr>
+        <div class="todoBody">
+            <section class="mainBox">
+                <div
+                    style="  display: flex; flex-direction: column;  align-items: center; justify-content: center;  height: 90px;  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); margin-bottom: 15px;">
+                    <div class="todoHeading">TODO</div>
+                    <div class="personCls" id="personId" style="font-size: x-small;"></div>
+                </div>
+                <hr>
+                <div class="contain">
+                    <div class="main col-6 col-s-9" id="leftsidebarInput">
+                        <div class="titleInput" style="margin-left: 50px; ">
+
+                            Title : <input class="nameClass" id="inputId" type="text" placeholder="Enter Title"
+                                style="   width: 185px;  text-transform: capitalize; ">
+
+                        </div>
+
+                        <div class="titleInput" style="flex-direction: column;">
+                            <div>
+
+                                Description :<input class="nameClass" id="inputDesId" type="text"
+                                    placeholder="Write Something" style="     width: 185px; height: 35px; ">
+                            </div>
+                            <div id="desError"></div>
+
+                        </div>
+
+                        <div>
+                            <input class="btnClass" id="saveBtnId" value="Save" type="button" name="button"
+                                onclick="saveTodoFun()" style="width: 65px; border: none;">
+                            <input class="updBtn" id="updBtn" value="Update" type="button" name="text"
+                                onclick="saveTodoFun()" style="width: 50px;">
+                        </div>
+                    </div>
+
+
+                    <div class="col-3 col-s-12" id="mainList">
+                        <div class="aside">
+                            <div class="name_des">
+                                <div class="nameTitle">Title</div>
+                                <div class="nameDes">Description</div>
+                                <dic class="nameAction">Action</dic>
+                            </div>
+
+                            <div class="allTodoList" id="allTodoList">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="todoHomeJS.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- ------------------------------------------------------------------- -->
+
+
+
+    <script src="todoRegistration_loginJS.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
